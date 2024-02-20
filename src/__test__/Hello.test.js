@@ -1,5 +1,9 @@
-import { render, screen } from '@testing-library/react'
+import { cleanup, render, screen } from '@testing-library/react'
 import Hello from '../components/Hello'
+
+afterAll(() => {
+  cleanup()
+})
 
 test('render hello component', () => {
   render(<Hello />)
